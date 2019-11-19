@@ -5249,11 +5249,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tuelysaseendran\\source\\repos\\NUnitTestProject13\\NUnitTestProject13\\NUnitTestProject13.csproj",
+      "projectUniqueName": "C:\\Users\\tuelysaseendran\\Desktop\\Test\\NUnitTestProject13\\NUnitTestProject13\\NUnitTestProject13.csproj",
       "projectName": "NUnitTestProject13",
-      "projectPath": "C:\\Users\\tuelysaseendran\\source\\repos\\NUnitTestProject13\\NUnitTestProject13\\NUnitTestProject13.csproj",
+      "projectPath": "C:\\Users\\tuelysaseendran\\Desktop\\Test\\NUnitTestProject13\\NUnitTestProject13\\NUnitTestProject13.csproj",
       "packagesPath": "C:\\Users\\tuelysaseendran\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tuelysaseendran\\source\\repos\\NUnitTestProject13\\NUnitTestProject13\\obj\\",
+      "outputPath": "C:\\Users\\tuelysaseendran\\Desktop\\Test\\NUnitTestProject13\\NUnitTestProject13\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tuelysaseendran\\AppData\\Roaming\\NuGet\\NuGet.Config",

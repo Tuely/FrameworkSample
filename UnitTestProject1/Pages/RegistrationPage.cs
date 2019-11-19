@@ -36,8 +36,7 @@ namespace UnitTestProject1.Pages
         public void FillSignUpDetails(AccountDetails accountDetails)
         {
             SignUpButton.Click();
-            EnterTitle(accountDetails.Title)
-                  ;
+            EnterTitle(accountDetails.Title);
             EnterName(accountDetails.FirstName);
 
         }
