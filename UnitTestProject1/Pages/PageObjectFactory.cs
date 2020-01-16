@@ -19,11 +19,6 @@ namespace UnitTestProject1.Pages
         public HomePage homePage()
         {
             return _basePage.GetPage<HomePage>(_driver);
-        }
-
-        public RegistrationPage RegistrationPage()
-        {
-            return _basePage.GetPage<RegistrationPage>(_driver);
-        }
+        }       
     }
 }

@@ -7,13 +7,14 @@ using OpenQA.Selenium;
 using UnitTestProject1.Common;
 using OpenQA.Selenium.Support;
 using OpenQA.Selenium.Support.UI;
+using System.Diagnostics;
 
 namespace UnitTestProject1.CoreUi
 {
   public class WebDriverSupport
     {
         private static IWebDriver _driver;
-
+        private Stopwatch Watch { get; set; }
         public static IWebDriver SupportDriver()
         {
             return _driver;
@@ -32,17 +33,48 @@ namespace UnitTestProject1.CoreUi
                 return _driver;
         }
 
-
-        public void EnterText(IWebElement e,string text)
+        public void EnterText(IWebElement element, string text)
         {
-            e.Clear();
-            e.SendKeys(text);
+            WaitUntilElementDisplayed(element);
+            //if (clearBeforeTyping) element.Clear();
+            element.SendKeys(text);
         }
 
-        public void SelectValueDropDown(IWebElement e, string test)
+       
+
+        public bool WaitUntilElementDisplayed(IWebElement element, int timeout = 60)
         {
-            var select = new SelectElement(e);
-            select.SelectByText(test);
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(0);
+            Watch = new Stopwatch();
+            Watch.Start();
+            var elementDisplayed = false;
+            while (Watch.Elapsed.TotalMilliseconds <= timeout * 1000 && !elementDisplayed)
+            {
+                try
+                {
+                    if (element.Displayed)
+                    {
+                        elementDisplayed = true;
+                    }
+                }
+                catch
+                {
+                    //Ignored
+                }
+            }
+
+            _driver.Manage().Timeouts().ImplicitWait = AppConfigManager.ImplictWaitPeriod();
+             return elementDisplayed;
         }
+
+
+        //public void EnterText(IWebElement e,string text)
+        //{
+        //    e.Clear();
+        //    e.SendKeys(text);
+        //}
+  
+
+       
     }
 }
