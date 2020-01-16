@@ -31,6 +31,5 @@ namespace UnitTestProject1
         {
             _page.homePage().Validate();
         }
-
     }
 }
